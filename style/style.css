@@ -51,23 +51,40 @@ body{
 
 .painel5 { background-image:url(https://images.unsplash.com/photo-1730724583278-151efd042e16?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
 
-.panel > * {
+.painel > * {
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .panel p {
+  .painel > *:first-child { transform: translateY(-100%); }
+    .painel.open-active > *:first-child { transform: translateY(0); }
+    .painel > *:last-child { transform: translateY(100%); }
+    .painel.open-active > *:last-child { transform: translateY(0); }
+
+
+  .painel p {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
     font-size: 2em;
   }
 
-  .panel p:nth-child(2) {
+  .painel p:nth-child(2) {
     font-size: 4em;
   }
 
-  .panel.open {
+  .painel.open {
+    flex: 5;
     font-size: 40px;
+  }
+
+  @media only screen and (max-width: 600px){
+    .painel p {
+      font-size: 1em;
+    }
   }

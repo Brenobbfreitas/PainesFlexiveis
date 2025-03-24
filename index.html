@@ -36,5 +36,17 @@
             <p>Motion</p>
         </div>
     </div>
+
+    <script>
+        const painels = document.querySelectorAll('.painel');
+
+        function toggleOpen() {
+            console.log('ola ola');
+            this.classList.toggle('open');
+        }
+
+        painels.forEach(painel => painel.addEventListener('click', toggleOpen));
+
+    </script>
 </body>
 </html>
