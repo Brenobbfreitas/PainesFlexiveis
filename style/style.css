@@ -1,28 +1,29 @@
+/* Estilos Globais */
 html{
     box-sizing: border-box;
     background:  #ffc600;
     font-family: 'helvetica neue';
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 200; /* peso da fonte*/
 }
 
 body{
-    margin: 0;
+    margin: 0; /*remove margem padrão do boy*/
 }
 
 *, *::before, *::after{
-    box-sizing: inherit;
+    box-sizing: inherit; /* herda o box-sizing do elemento pai */
 }
 
 .painels{
-    min-height: 100vh; /* Relative to 1% of the height of the viewport*	 */
-    overflow: hidden;   /*operações para esconder ou movimentar o restante da sobreposições*/
-    display: flex;  /* o display flex ordena aos paines de maneira horizontal*/
+    min-height: 100vh; /* altura mínima = 100% da altura da tela */
+    overflow: hidden;   /*esconde conteúdo que ultrapassa*/
+    display: flex;  /* o display flex ordena aos paines de maneira flexivel(horizontal)*/
 }
 
 .painel{
     background: #6b0f9c;
-    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1); /*Borda interna branca*/
     color: white;
     text-align: center;
     align-items: center;
@@ -33,11 +34,11 @@ body{
         flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
         background 0.2s;
     font-size: 20px;
-    background-size: cover;
-    background-position: center;
-    flex: 1;
+    background-size: cover; /* cobre todo o espaço */
+    background-position: center; /* centraliza a imagem*/
+    flex: 1; /* distribui o espaço igualmente*/
     display: flex;
-    justify-content: center; /*arruma o conteudo do painel no centro*/
+    justify-content: center; /*centralizar na vertical*/
     flex-direction: column; /*ajusta o conteudo para colunas*/
 }
 
@@ -51,6 +52,8 @@ body{
 
 .painel5 { background-image:url(https://images.unsplash.com/photo-1730724583278-151efd042e16?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
 
+/*Estiliza todos os elementos filhos*/
+
 .painel > * {
     margin: 0;
     width: 100%;
@@ -61,25 +64,25 @@ body{
     align-items: center;
   }
 
-  .painel > *:first-child { transform: translateY(-100%); }
-    .painel.open-active > *:first-child { transform: translateY(0); }
-    .painel > *:last-child { transform: translateY(100%); }
-    .painel.open-active > *:last-child { transform: translateY(0); }
+    .painel > *:first-child { transform: translateY(-100%); } /* esconde o primeiro filho acima*/
+    .painel.open-active > *:first-child { transform: translateY(0); } /*Mostra quando ativa*/
+    .painel > *:last-child { transform: translateY(100%); } /* esconde ultimo filho abaixo */
+    .painel.open-active > *:last-child { transform: translateY(0); /*mostra quando ativo*/
 
 
   .painel p {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    font-size: 2em;
+    font-size: 2em; /* 2x o tamanho base*/
   }
 
   .painel p:nth-child(2) {
-    font-size: 4em;
+    font-size: 4em; /* destava o segundo paragrafo*/
   }
 
   .painel.open {
-    flex: 5;
+    flex: 5; /* ocupa 5x mais espaço que os outros */
     font-size: 40px;
   }
 
