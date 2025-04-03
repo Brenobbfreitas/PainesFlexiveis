@@ -67,7 +67,7 @@ body{
     .painel > *:first-child { transform: translateY(-100%); } /* esconde o primeiro filho acima*/
     .painel.open-active > *:first-child { transform: translateY(0); } /*Mostra quando ativa*/
     .painel > *:last-child { transform: translateY(100%); } /* esconde ultimo filho abaixo */
-    .painel.open-active > *:last-child { transform: translateY(0); /*mostra quando ativo*/
+    .painel.open-active > *:last-child { transform: translateY(0); }/*mostra quando ativo*/
 
 
   .painel p {
@@ -78,11 +78,11 @@ body{
   }
 
   .painel p:nth-child(2) {
-    font-size: 4em; /* destava o segundo paragrafo*/
+    font-size: 4em; /* destaca o segundo paragrafo*/
   }
 
   .painel.open {
-    flex: 5; /* ocupa 5x mais espaço que os outros */
+    flex: 4; /* ocupa 5x mais espaço que os outros */
     font-size: 40px;
   }
 
@@ -91,4 +91,4 @@ body{
       font-size: 1em;
     }
   }
-    }
+    
