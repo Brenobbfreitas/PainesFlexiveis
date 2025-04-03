@@ -6,7 +6,7 @@
     <title>Flex Panels</title>
     <link rel="icon" href="https://fav.farm/🔥">
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="painels">
@@ -37,23 +37,6 @@
         </div>
     </div>
 
-    <script>
-        const painels = document.querySelectorAll('.painel');
-
-        function toggleOpen() {
-            console.log('ola ola');
-            this.classList.toggle('open');
-        }
-
-        function toggleActive(e) {
-            console.log(e.propertyName);
-            if (e.propertyName.includes('flex')) {
-                this.classList.toggle('open-active')
-            }
-        }
-
-        painels.forEach(painel => painel.addEventListener('click', toggleOpen));
-        painels.forEach(painel => painel.addEventListener('transitionend', toggleActive))
-    </script>
+    <script type="text/javaScript" src="./script.js"></script>
 </body>
 </html>
